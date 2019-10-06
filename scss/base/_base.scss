@@ -1,0 +1,36 @@
+// ===================================================================== 
+// four elements directly:
+// the universal selector (*), ul, p, and a
+// =====================================================================
+
+p {
+    text-align: left;
+    color: $grey;
+    margin-bottom: em(48px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a {
+    color: $color-secondary;
+    font-weight: $font-weight--semi-bold;
+    text-decoration: none;
+    &:hover {
+        color: $color-accent;
+    }
+    &:visited {
+        color: $info;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &:focus {
+        outline: none;
+    }
+}
