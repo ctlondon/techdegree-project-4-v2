@@ -18,7 +18,7 @@
     padding: 1em 10px;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
 
     // NOTE: replace with media query mixin if aiming for exceeds
     // @media (min-width: 768px) {
@@ -32,7 +32,7 @@
 
   // .grid__col
   &__col {
-
+    
     // create grid columns dynamically
     // loop through each column size
     @for $i from 1 through 12 {
@@ -47,6 +47,7 @@
         margin-top: 10px;
         flex-basis: 100%;
         
+
         &.theme__colors {
           @extend %rounded;
         }
@@ -82,5 +83,12 @@
       // add grid gutter
       margin-left: 10px;
     }
+  }
+}
+
+[class^=grid__col].theme__colors{
+  text-align: left;
+  @include mq('md') {
+    text-align: center;
   }
 }
